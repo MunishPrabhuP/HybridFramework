@@ -62,7 +62,7 @@ public class WebAutomationCases {
 		driver.quit();
 	}
 
-	@Test(priority = 1, description = "Verify Ajax Form Submit", enabled = false)
+	@Test(priority = 1, description = "Verify Ajax Form Submit", enabled = true)
 	@Feature("UI Automation")
 	@Story("Selenium Easy")
 	@Severity(SeverityLevel.NORMAL)
@@ -75,7 +75,7 @@ public class WebAutomationCases {
 				"Ajax Form Submission failed");
 	}
 
-	@Test(priority = 2, description = "Verify Download Progress and Log the Percentage", enabled = false)
+	@Test(priority = 2, description = "Verify Download Progress and Log the Percentage", enabled = true)
 	@Feature("UI Automation")
 	@Story("Selenium Easy")
 	@Severity(SeverityLevel.NORMAL)
@@ -90,7 +90,7 @@ public class WebAutomationCases {
 		CustomLogger.info("Total Download Duration:(In Seconds)" + timeElapsed.getSeconds());
 	}
 
-	@Test(priority = 3, description = "Verify Slider", enabled = false)
+	@Test(priority = 3, description = "Verify Slider", enabled = true)
 	@Feature("UI Automation")
 	@Story("Selenium Easy")
 	@Severity(SeverityLevel.NORMAL)
@@ -107,7 +107,7 @@ public class WebAutomationCases {
 		s_assert.assertAll();
 	}
 
-	@Test(priority = 4, description = "Verify Multi Window Model Titles", enabled = false)
+	@Test(priority = 4, description = "Verify Multi Window Model Titles", enabled = true)
 	@Feature("UI Automation")
 	@Story("Selenium Easy")
 	@Severity(SeverityLevel.NORMAL)
@@ -128,7 +128,7 @@ public class WebAutomationCases {
 		CustomLogger.info("Parent Window Title -> " + driver.getTitle());
 	}
 
-	@Test(priority = 5, description = "Verify Javascript Alert Box", enabled = false)
+	@Test(priority = 5, description = "Verify Javascript Alert Box", enabled = true)
 	@Feature("UI Automation")
 	@Story("Selenium Easy")
 	@Severity(SeverityLevel.NORMAL)
@@ -165,7 +165,7 @@ public class WebAutomationCases {
 		Assert.assertEquals(fileContent, comment);
 	}
 
-	@Test(priority = 7, description = "Verify Date Picker", enabled = false)
+	@Test(priority = 7, description = "Verify Date Picker", enabled = true)
 	@Feature("UI Automation")
 	@Story("Selenium Easy")
 	@Severity(SeverityLevel.NORMAL)

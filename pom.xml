@@ -6,8 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<aspectj.version>1.9.6</aspectj.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
@@ -20,6 +18,10 @@
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
+					<suiteXmlFiles>
+						<suiteXmlFile>api_suite.xml</suiteXmlFile>
+						<suiteXmlFile>web_suite.xml</suiteXmlFile>
+					</suiteXmlFiles>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -28,6 +30,13 @@
 						<version>${aspectj.version}</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

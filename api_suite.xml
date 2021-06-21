@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Automation Suite">
+	<listeners>
+		<listener class-name="com.newera.api.lib.CustomAPIListener"></listener>
+	</listeners>
+	<test name="API Tests">
+		<classes>
+			<class name="com.newera.api.testcases.APIAutomationCases" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

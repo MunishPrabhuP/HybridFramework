@@ -3,8 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.framework.self</groupId>
 	<artifactId>BaseFramework</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<properties>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+		<module>visual</module>
+		<module>ui</module>
+		<module>api</module>
+		<module>library</module>
+	</modules>
+    <properties>
 		<aspectj.version>1.9.6</aspectj.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

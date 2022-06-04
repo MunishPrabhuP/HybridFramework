@@ -1,0 +1,31 @@
+# Tenant Drill-Down Page
+
+@objects
+    token_consumption_section         css         div[class^='tenantLicenseUsage_cardRow']
+    consumed_token_count-*            css         div[test-id='card-content']
+    historical_usage_section          xpath       //div[contains(@class,'card tenantLicenseUsage_chartCard')]
+    license_details_section           xpath       //span[text()='License details']/ancestor::div[@class='card ']
+
+= Token Consumption Summary Section =
+    @on token_consumption
+        token_consumption_section:
+            image file image_dumps/token_consumption_summary_section.png, ignore-objects consumed_token_count-*, error 1%
+
+= Historical Usage Section =
+    @on total_usage_linear_view
+        historical_usage_section:
+            image file image_dumps/historical_usage_section_total_usage_linear_view.png, error 1%
+    @on total_usage_log_view
+        historical_usage_section:
+            image file image_dumps/historical_usage_section_total_usage_log_view.png, error 1%
+    @on melt_linear_view
+        historical_usage_section:
+            image file image_dumps/historical_usage_section_melt_linear_view.png, error 1%
+    @on melt_log_view
+        historical_usage_section:
+            image file image_dumps/historical_usage_section_melt_log_view.png, error 1%
+
+= License Details Section =
+    @on license_details
+        license_details_section:
+            image file image_dumps/license_details_section.png

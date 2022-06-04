@@ -1,5 +1,9 @@
 logs/*
 target/*
+.idea
+visual/allure-results
+visual/target
+library/target
 test-output/*
 allure-results/*
 .classpath
